@@ -1,0 +1,28 @@
+{
+  "_note": "All content is synthetic. Names, numbers, domains and accounts are fictitious and created for demonstration.",
+  "title": "Fake customs-fee messages reported by a resident",
+  "description": "Resident reported a WhatsApp conversation and an SMS about a held parcel. One payment attempt was blocked by the bank.",
+  "evidence": [
+    {
+      "kind": "conversation",
+      "label": "WhatsApp chat export",
+      "source_note": "Exported by the reporting resident (synthetic)",
+      "content": "[2026-11-02 09:14] +971 50 123 4567: Hello, this is Aramex customer service. Your parcel AE-77812 is held at customs.\n[2026-11-02 09:16] Resident: What parcel? I did not order anything.\n[2026-11-02 09:18] +971 50 123 4567: It is a gift shipment. You must pay the customs fee of 14 AED within 2 hours or it will be returned and you will receive a fine.\n[2026-11-02 09:20] +971 50 123 4567: Click the link and enter your card details: http://aramex-delivery-ae.top/pay\n[2026-11-02 09:31] +971 50 123 4567: We sent a verification code to your phone. Send me the code now to release the parcel. Do not tell anyone, this is confidential."
+    },
+    {
+      "kind": "text",
+      "label": "SMS received the same day",
+      "source_note": "Transcribed from the resident's phone (synthetic)",
+      "content": "Aramex: Your shipment is on hold. Pay the redelivery fee within 24 hours: http://aramex-delivery-ae.top/track or call 050 123 4567."
+    },
+    {
+      "kind": "url",
+      "label": "Link visited by the resident",
+      "content": "http://aramex-delivery-ae.top/pay?id=77812"
+    }
+  ],
+  "files": [
+    {"path": "phishing_email.eml", "label": "E-mail forwarded by the resident"},
+    {"path": "sms_screenshot.png", "label": "Screenshot of second SMS"}
+  ]
+}

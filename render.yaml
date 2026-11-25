@@ -1,0 +1,18 @@
+# Render Blueprint: free web service (data resets on redeploy; the radar refills itself from live feeds).
+services:
+  - type: web
+    name: merqab
+    runtime: docker
+    plan: free
+    region: frankfurt
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: MIRQAB_SECRET_KEY
+        generateValue: true
+      - key: MIRQAB_RADAR_ENABLED
+        value: "true"
+      - key: MIRQAB_ALLOWED_HOSTS
+        value: ".onrender.com"
+      - key: MIRQAB_VAPID_SUBJECT
+        value: "mailto:security@mirqab.app"

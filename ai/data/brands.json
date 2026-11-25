@@ -1,0 +1,592 @@
+{
+ "_comment": "Sample list of commonly impersonated brands and their official registrable domains. Extend for your deployment. Used for look-alike and brand/link mismatch checks only; MERQAB never contacts these domains.",
+ "brands": {
+  "paypal": {
+   "names": [
+    "paypal",
+    "باي بال"
+   ],
+   "domains": [
+    "paypal.com"
+   ]
+  },
+  "amazon": {
+   "names": [
+    "amazon",
+    "امازون"
+   ],
+   "domains": [
+    "amazon.com",
+    "amazon.ae",
+    "amazon.sa",
+    "amazon.eg"
+   ]
+  },
+  "apple": {
+   "names": [
+    "apple",
+    "icloud",
+    "itunes",
+    "ابل"
+   ],
+   "domains": [
+    "apple.com",
+    "icloud.com"
+   ]
+  },
+  "microsoft": {
+   "names": [
+    "microsoft",
+    "outlook",
+    "office365",
+    "مايكروسوفت"
+   ],
+   "domains": [
+    "microsoft.com",
+    "live.com",
+    "office.com",
+    "outlook.com"
+   ]
+  },
+  "google": {
+   "names": [
+    "google",
+    "gmail",
+    "جوجل"
+   ],
+   "domains": [
+    "google.com",
+    "gmail.com",
+    "google.ae"
+   ]
+  },
+  "netflix": {
+   "names": [
+    "netflix",
+    "نتفليكس"
+   ],
+   "domains": [
+    "netflix.com"
+   ]
+  },
+  "whatsapp": {
+   "names": [
+    "whatsapp",
+    "واتساب"
+   ],
+   "domains": [
+    "whatsapp.com",
+    "wa.me"
+   ]
+  },
+  "facebook": {
+   "names": [
+    "facebook",
+    "meta",
+    "فيسبوك"
+   ],
+   "domains": [
+    "facebook.com",
+    "meta.com",
+    "fb.com"
+   ]
+  },
+  "instagram": {
+   "names": [
+    "instagram",
+    "انستغرام",
+    "انستقرام"
+   ],
+   "domains": [
+    "instagram.com"
+   ]
+  },
+  "dhl": {
+   "names": [
+    "dhl"
+   ],
+   "domains": [
+    "dhl.com",
+    "dhl.ae"
+   ]
+  },
+  "aramex": {
+   "names": [
+    "aramex",
+    "ارامكس"
+   ],
+   "domains": [
+    "aramex.com"
+   ]
+  },
+  "fedex": {
+   "names": [
+    "fedex",
+    "فيديكس"
+   ],
+   "domains": [
+    "fedex.com"
+   ]
+  },
+  "emiratespost": {
+   "names": [
+    "emirates post",
+    "emiratespost",
+    "بريد الامارات"
+   ],
+   "domains": [
+    "emiratespost.ae"
+   ]
+  },
+  "emiratesnbd": {
+   "names": [
+    "emirates nbd",
+    "emiratesnbd",
+    "الامارات دبي الوطني"
+   ],
+   "domains": [
+    "emiratesnbd.com"
+   ]
+  },
+  "adcb": {
+   "names": [
+    "adcb",
+    "بنك ابوظبي التجاري"
+   ],
+   "domains": [
+    "adcb.com"
+   ]
+  },
+  "fab": {
+   "names": [
+    "first abu dhabi bank",
+    "bankfab",
+    "بنك ابوظبي الاول"
+   ],
+   "domains": [
+    "bankfab.com"
+   ]
+  },
+  "etisalat": {
+   "names": [
+    "etisalat",
+    "اتصالات"
+   ],
+   "domains": [
+    "etisalat.ae",
+    "eand.com"
+   ]
+  },
+  "du": {
+   "names": [
+    "du telecom"
+   ],
+   "domains": [
+    "du.ae"
+   ]
+  },
+  "alrajhi": {
+   "names": [
+    "al rajhi",
+    "alrajhi",
+    "الراجحي"
+   ],
+   "domains": [
+    "alrajhibank.com.sa"
+   ]
+  },
+  "stc": {
+   "names": [
+    "stc pay",
+    "stcpay"
+   ],
+   "domains": [
+    "stc.com.sa",
+    "stcpay.com.sa"
+   ]
+  },
+  "binance": {
+   "names": [
+    "binance",
+    "بينانس"
+   ],
+   "domains": [
+    "binance.com"
+   ]
+  },
+  "uaepass": {
+   "names": [
+    "uae pass",
+    "uaepass"
+   ],
+   "domains": [
+    "uaepass.ae"
+   ]
+  },
+  "dubaipolice": {
+   "names": [
+    "dubai police",
+    "dubaipolice",
+    "شرطة دبي"
+   ],
+   "domains": [
+    "dubaipolice.gov.ae"
+   ]
+  },
+  "salik": {
+   "names": [
+    "salik",
+    "سالك"
+   ],
+   "domains": [
+    "salik.ae"
+   ]
+  },
+  "dewa": {
+   "names": [
+    "dewa"
+   ],
+   "domains": [
+    "dewa.gov.ae"
+   ]
+  },
+  "adnoc": {
+   "names": [
+    "adnoc",
+    "ادنوك"
+   ],
+   "domains": [
+    "adnoc.ae",
+    "adnocdistribution.ae"
+   ]
+  },
+  "mashreq": {
+   "names": [
+    "mashreq",
+    "المشرق"
+   ],
+   "domains": [
+    "mashreq.com",
+    "mashreqbank.com"
+   ]
+  },
+  "rakbank": {
+   "names": [
+    "rakbank"
+   ],
+   "domains": [
+    "rakbank.ae"
+   ]
+  },
+  "careem": {
+   "names": [
+    "careem",
+    "كريم"
+   ],
+   "domains": [
+    "careem.com"
+   ]
+  },
+  "tabby": {
+   "names": [
+    "tabby"
+   ],
+   "domains": [
+    "tabby.ai"
+   ]
+  },
+  "tamara": {
+   "names": [
+    "tamara"
+   ],
+   "domains": [
+    "tamara.co"
+   ]
+  },
+  "roblox": {
+   "names": [
+    "roblox"
+   ],
+   "domains": [
+    "roblox.com"
+   ]
+  },
+  "steam": {
+   "names": [
+    "steamcommunity",
+    "steampowered"
+   ],
+   "domains": [
+    "steamcommunity.com",
+    "steampowered.com"
+   ]
+  },
+  "tamm": {
+   "names": [
+    "tamm",
+    "تطبيق تم",
+    "منصة تم"
+   ],
+   "domains": [
+    "tamm.abudhabi"
+   ]
+  },
+  "icp": {
+   "names": [
+    "icp",
+    "الهيئة الاتحادية للهوية",
+    "الهوية والجنسية"
+   ],
+   "domains": [
+    "icp.gov.ae"
+   ]
+  },
+  "moi": {
+   "names": [
+    "moi",
+    "وزارة الداخلية"
+   ],
+   "domains": [
+    "moi.gov.ae"
+   ]
+  },
+  "adpolice": {
+   "names": [
+    "adpolice",
+    "abudhabipolice",
+    "شرطة ابوظبي"
+   ],
+   "domains": [
+    "adpolice.gov.ae"
+   ]
+  },
+  "rta": {
+   "names": [
+    "rta",
+    "هيئة الطرق والمواصلات"
+   ],
+   "domains": [
+    "rta.ae"
+   ]
+  },
+  "adib": {
+   "names": [
+    "adib",
+    "مصرف ابوظبي الاسلامي"
+   ],
+   "domains": [
+    "adib.ae"
+   ]
+  },
+  "dib": {
+   "names": [
+    "dib",
+    "بنك دبي الاسلامي"
+   ],
+   "domains": [
+    "dib.ae"
+   ]
+  },
+  "emiratesislamic": {
+   "names": [
+    "emiratesislamic",
+    "الامارات الاسلامي"
+   ],
+   "domains": [
+    "emiratesislamic.ae"
+   ]
+  },
+  "etihad": {
+   "names": [
+    "etihad",
+    "الاتحاد للطيران"
+   ],
+   "domains": [
+    "etihad.com"
+   ]
+  }
+ },
+ "shorteners": [
+  "bit.ly",
+  "tinyurl.com",
+  "t.co",
+  "goo.gl",
+  "is.gd",
+  "cutt.ly",
+  "rb.gy",
+  "shorturl.at",
+  "t.ly",
+  "ow.ly",
+  "buff.ly",
+  "rebrand.ly",
+  "tiny.cc",
+  "s.id",
+  "v.gd"
+ ],
+ "suspicious_tlds": [
+  "zip",
+  "mov",
+  "xyz",
+  "top",
+  "click",
+  "icu",
+  "buzz",
+  "rest",
+  "cfd",
+  "sbs",
+  "cyou",
+  "monster",
+  "quest",
+  "tk",
+  "ml",
+  "ga",
+  "cf",
+  "gq",
+  "work",
+  "support",
+  "live",
+  "shop",
+  "online",
+  "site",
+  "info"
+ ],
+ "second_level_suffixes": [
+  "co",
+  "com",
+  "gov",
+  "org",
+  "net",
+  "ac",
+  "edu",
+  "sch",
+  "mil"
+ ],
+ "radar_lure_words": [
+  "login",
+  "signin",
+  "verify",
+  "verification",
+  "secure",
+  "security",
+  "update",
+  "account",
+  "support",
+  "wallet",
+  "pay",
+  "payment",
+  "refund",
+  "delivery",
+  "deliver",
+  "track",
+  "tracking",
+  "parcel",
+  "shipment",
+  "customs",
+  "kyc",
+  "bonus",
+  "gift",
+  "reward",
+  "prize",
+  "unlock",
+  "suspend",
+  "billing",
+  "confirm",
+  "auth",
+  "otp",
+  "renew",
+  "fine",
+  "fines",
+  "violation",
+  "portal",
+  "claim",
+  "careers",
+  "jobs",
+  "job",
+  "recruitment",
+  "hiring"
+ ],
+ "shared_hosting": [
+  "000webhostapp.com",
+  "appspot.com",
+  "azurewebsites.net",
+  "b-cdn.net",
+  "blogspot.com",
+  "bolt.host",
+  "canva.site",
+  "carrd.co",
+  "duckdns.org",
+  "dweb.link",
+  "editorx.io",
+  "firebaseapp.com",
+  "framer.app",
+  "framer.website",
+  "framer.wiki",
+  "ghost.io",
+  "gitbook.io",
+  "github.io",
+  "gitlab.io",
+  "glide.page",
+  "glitch.me",
+  "godaddysites.com",
+  "herokuapp.com",
+  "ipfs.io",
+  "jimdosite.com",
+  "my.canva.site",
+  "myshopify.com",
+  "mystrikingly.com",
+  "netlify.app",
+  "netlify.com",
+  "ngrok-free.app",
+  "ngrok.app",
+  "ngrok.io",
+  "notion.site",
+  "onrender.com",
+  "pages.dev",
+  "r2.dev",
+  "repl.co",
+  "replit.app",
+  "site123.me",
+  "sites.google.com",
+  "softr.app",
+  "square.site",
+  "surge.sh",
+  "tilda.ws",
+  "translate.goog",
+  "trycloudflare.com",
+  "typedream.app",
+  "vercel.app",
+  "vercel.com",
+  "web.app",
+  "webflow.io",
+  "webnode.page",
+  "weebly.com",
+  "weeblysite.com",
+  "wixsite.com",
+  "wixstudio.io",
+  "wordpress.com",
+  "workers.dev",
+  "yolasite.com"
+ ],
+ "legit_related": [
+  "amazonaws.com",
+  "amazon-adsystem.com",
+  "amazontrust.com",
+  "googleapis.com",
+  "googleusercontent.com",
+  "gstatic.com",
+  "googlevideo.com",
+  "microsoftonline.com",
+  "microsoft-int.com",
+  "office365.com",
+  "paypalobjects.com",
+  "paypal-objects.com",
+  "fbcdn.net",
+  "facebook.net",
+  "whatsapp.net",
+  "nflxvideo.net",
+  "netflix.net",
+  "icloud-content.com",
+  "apple-cloudkit.com",
+  "cdn-apple.com"
+ ]
+}

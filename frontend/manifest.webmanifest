@@ -1,0 +1,29 @@
+{
+  "id": "/",
+  "name": "MERQAB مرقاب",
+  "short_name": "MERQAB",
+  "description": "AI-powered personal cybersecurity shield: message guardian, live call guardian and verified threat alerts.",
+  "start_url": "/#/shield",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#07131d",
+  "theme_color": "#0b1f2e",
+  "lang": "ar",
+  "dir": "auto",
+  "categories": ["security", "utilities"],
+  "icons": [
+    {"src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "/assets/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Check a message", "short_name": "Check", "url": "/#/home", "icons": [{"src": "/assets/icons/icon-192.png", "sizes": "192x192"}]},
+    {"name": "Live Call Guardian", "short_name": "Call Guardian", "url": "/#/shield/call", "icons": [{"src": "/assets/icons/icon-192.png", "sizes": "192x192"}]}
+  ],
+  "share_target": {
+    "action": "/",
+    "method": "GET",
+    "params": {"title": "share_title", "text": "share_text", "url": "share_url"}
+  }
+}

@@ -1,0 +1,14 @@
+.git
+.env
+*.env.local
+data
+.venv
+venv
+__pycache__
+*.pyc
+.pytest_cache
+test-results
+screenshots
+ACCOUNTS.txt
+_to_delete
+*.command

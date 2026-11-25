@@ -1,0 +1,18 @@
+From: "Aramex Delivery" <noreply@aramex-notice.top>
+Reply-To: support-desk@mail-fastpay.xyz
+To: resident@example.org
+Subject: Action required: your parcel AE-77812 is on hold
+Date: Mon, 02 Nov 2026 10:05:00 +0400
+Message-ID: <synthetic-demo-0001@aramex-notice.top>
+Authentication-Results: mx.example.org; spf=fail smtp.mailfrom=aramex-notice.top; dkim=none; dmarc=fail
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Dear customer,
+
+Your parcel AE-77812 could not be delivered because the customs fee is unpaid.
+Pay the customs fee of 14 AED immediately, otherwise the shipment will be returned.
+
+Pay now: http://aramex-delivery-ae.top/pay
+
+This is an automated message. Synthetic demonstration content.

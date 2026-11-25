@@ -1,0 +1,33 @@
+# Secrets & local config
+.env
+*.env.local
+
+# Runtime data (database, stored evidence)
+/data/
+*.db
+*.db-wal
+*.db-shm
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+ACCOUNTS.txt
+.venv/
+
+# Test artefacts
+test-results/
+screenshots/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.tools/
+PUBLIC-LINK.txt
+mq-update.zip

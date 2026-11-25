@@ -1,0 +1,192 @@
+{
+ "generated": "2026-11-24",
+ "split": "test",
+ "flag_rule": "risk level >= medium",
+ "sets": [
+  {
+   "key": "urls",
+   "file": "urls_test.tsv",
+   "title": {
+    "en": "Live phishing links vs popular legitimate sites",
+    "ar": "روابط تصيّد حيّة مقابل مواقع مشروعة شائعة"
+   },
+   "source": {
+    "en": "OpenPhish community feed (24 Nov 2026) + public top-10,000 domain list",
+    "ar": "قائمة OpenPhish المجتمعية (24 نوفمبر 2026) + قائمة أشهر 10,000 نطاق"
+   },
+   "n": 1150,
+   "positives": 150,
+   "negatives": 1000,
+   "tp": 115,
+   "fp": 5,
+   "tn": 995,
+   "fn": 35,
+   "accuracy": 0.9652,
+   "precision": 0.9583,
+   "recall": 0.7667,
+   "f1": 0.8519,
+   "false_positive_rate": 0.005,
+   "ms_per_item": 0.59,
+   "examples_missed": [
+    "https://teachschool.up.railway.app/wp-content/plugins/Seurnation/seur/page/index.php/",
+    "https://www.eebazzars.com/",
+    "https://mybtmailweb.weeblysite.com/",
+    "https://royacloudnat.github.io/zhwuwhru/",
+    "https://urlz.li/B2McG0BJ"
+   ],
+   "examples_false_alarm": [
+    "https://bit.ly/",
+    "https://microsoftstore.com/",
+    "https://tayara.tn/",
+    "https://behance.net/",
+    "https://microsoftonline.com/"
+   ]
+  },
+  {
+   "key": "uae",
+   "file": "uae_scenarios.tsv",
+   "title": {
+    "en": "UAE scam scenarios (Arabic, Emirati, English)",
+    "ar": "سيناريوهات احتيال إماراتية (عربي، إماراتي، إنجليزي)"
+   },
+   "source": {
+    "en": "Written by the MIRQAB team from publicly reported UAE scam types — indicative",
+    "ar": "كتبها فريق مِرقاب من أنواع احتيال إماراتية مُبلّغ عنها علناً — مؤشر تقريبي"
+   },
+   "n": 69,
+   "positives": 35,
+   "negatives": 34,
+   "tp": 31,
+   "fp": 1,
+   "tn": 33,
+   "fn": 4,
+   "accuracy": 0.9275,
+   "precision": 0.9688,
+   "recall": 0.8857,
+   "f1": 0.9254,
+   "false_positive_rate": 0.0294,
+   "ms_per_item": 0.42,
+   "examples_missed": [
+    "Invest with our crypto trading expert and earn guaranteed 30% weekly profit. Limited slots, deposit today via Binance.",
+    "استثمر معنا في العملات الرقمية بأرباح مضمونة 20% أسبوعياً. العرض لفترة محدودة، حوّل الآن",
+    "لا تخبر أحد عن هذا الاتصال، نحن من جهة رسمية ونحتاج رقم بطاقتك والرقم السري للتحقق من هويتك",
+    "عرض حصري: آيفون 16 برو بـ 99 درهم فقط لأول 100 شخص. ادخل بيانات بطاقتك للحجز الآن"
+   ],
+   "examples_false_alarm": [
+    "أخوي حولت لك 300 درهم حق العشا، تأكد وصلتك؟"
+   ]
+  },
+  {
+   "key": "sms",
+   "file": "uci_sms_test.tsv",
+   "title": {
+    "en": "Public SMS spam benchmark (English)",
+    "ar": "معيار رسائل SMS المزعجة العام (إنجليزي)"
+   },
+   "source": {
+    "en": "UCI SMS Spam Collection, CC BY 4.0 — 'spam' includes plain marketing",
+    "ar": "مجموعة UCI لرسائل SMS المزعجة، CC BY 4.0 — تشمل إعلانات عادية"
+   },
+   "n": 2497,
+   "positives": 298,
+   "negatives": 2199,
+   "tp": 152,
+   "fp": 3,
+   "tn": 2196,
+   "fn": 146,
+   "accuracy": 0.9403,
+   "precision": 0.9806,
+   "recall": 0.5101,
+   "f1": 0.6711,
+   "false_positive_rate": 0.0014,
+   "ms_per_item": 0.29,
+   "examples_missed": [
+    "Boltblue tones for 150p Reply POLY# or MONO# eg POLY3 1. Cha Cha Slide 2. Yeah 3. Slow Jamz 6. Toxic 8. Come With Me or STOP 4 more tones tx",
+    "Will u meet ur dream partner soon? Is ur career off 2 a flyng start? 2 find out free, txt HORO followed by ur star sign, e. g. HORO ARIES",
+    "Free Msg: Ringtone!From: http://tms. widelive.com/index. wml?id=1b6a5ecef91ff9*37819&first=true18:0430-JUL-05",
+    "Message Important information for O2 user. Today is your lucky day! 2 find out why log onto http://www.urawinner.com there is a fantastic su",
+    "PRIVATE! Your 2003 Account Statement for shows 800 un-redeemed S. I. M. points. Call 08719899230 Identifier Code: 41685 Expires 07/11/04"
+   ],
+   "examples_false_alarm": [
+    "Solve d Case : A Man Was Found Murdered On  &lt;DECIMAL&gt; . &lt;#&gt;  AfterNoon. 1,His wife called Police. 2,Police questioned everyone. ",
+    "Save yourself the stress. If the person has a dorm account, just send your account details and the money will be sent to you.",
+    "Did u download the fring app?"
+   ]
+  },
+  {
+   "key": "evasion",
+   "file": "urls_test.tsv (transformed)",
+   "title": {
+    "en": "Evasion: disguised phishing links (redirect wrapper, defanged, upper-case)",
+    "ar": "التحايل: روابط تصيّد مموّهة (إعادة توجيه، تعطيل الرابط، أحرف كبيرة)"
+   },
+   "source": {
+    "en": "The held-out OpenPhish links, each disguised 3 ways; legitimate sites wrapped in a Google redirect",
+    "ar": "روابط OpenPhish المحجوبة نفسها، كل رابط مموّه بثلاث طرق؛ ومواقع مشروعة داخل إعادة توجيه Google"
+   },
+   "n": 1450,
+   "positives": 450,
+   "negatives": 1000,
+   "tp": 355,
+   "fp": 5,
+   "tn": 995,
+   "fn": 95,
+   "accuracy": 0.931,
+   "precision": 0.9861,
+   "recall": 0.7889,
+   "f1": 0.8765,
+   "false_positive_rate": 0.005,
+   "ms_per_item": 0.77,
+   "examples_missed": [
+    "hxxps://teachschool[.]up[.]railway[.]app/wp-content/plugins/Seurnation/seur/page/index.php/",
+    "https://TEACHSCHOOL.UP.RAILWAY.APP/wp-content/plugins/Seurnation/seur/page/index.php/",
+    "https://www.google.com/url?q=https%3A%2F%2Fwww.eebazzars.com%2F",
+    "hxxps://www[.]eebazzars[.]com/",
+    "https://WWW.EEBAZZARS.COM/"
+   ],
+   "examples_false_alarm": [
+    "https://www.google.com/url?q=https%3A%2F%2Fbit.ly%2F",
+    "https://www.google.com/url?q=https%3A%2F%2Fmicrosoftstore.com%2F",
+    "https://www.google.com/url?q=https%3A%2F%2Ftayara.tn%2F",
+    "https://www.google.com/url?q=https%3A%2F%2Fbehance.net%2F",
+    "https://www.google.com/url?q=https%3A%2F%2Fmicrosoftonline.com%2F"
+   ]
+  }
+ ],
+ "overall": {
+  "tp": 298,
+  "fp": 9,
+  "tn": 3224,
+  "fn": 185,
+  "n": 3716,
+  "accuracy": 0.9478
+ },
+ "baseline": {
+  "commit": "5126c43",
+  "note_en": "Same test files, engine version before the 24 Nov accuracy work (improvements were tuned on the dev halves only).",
+  "note_ar": "نفس ملفات الاختبار، بنسخة المحرك قبل تحسينات الدقة في 24 نوفمبر (ضُبطت التحسينات على نصف التطوير فقط).",
+  "sets": {
+   "urls": {
+    "accuracy": 0.8661,
+    "precision": 0.4231,
+    "recall": 0.0733,
+    "f1": 0.125,
+    "false_positive_rate": 0.015
+   },
+   "uae": {
+    "accuracy": 0.9275,
+    "precision": 0.9688,
+    "recall": 0.8857,
+    "f1": 0.9254,
+    "false_positive_rate": 0.0294
+   },
+   "sms": {
+    "accuracy": 0.8875,
+    "precision": 0.8696,
+    "recall": 0.0671,
+    "f1": 0.1246,
+    "false_positive_rate": 0.0014
+   }
+  }
+ }
+}
