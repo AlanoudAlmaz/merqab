@@ -1,6 +1,6 @@
 # MIRQAB production image (Render / any container host). TLS is terminated by the host; the app sees X-Forwarded-*.
 FROM python:3.12-slim
-ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 MIRQAB_DATA_DIR=/app/data
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 MIRQAB_DATA_DIR=/app/data MIRQAB_RADAR_ENABLED=true OMP_THREAD_LIMIT=1
 RUN apt-get update && apt-get install -y --no-install-recommends tesseract-ocr tesseract-ocr-ara tesseract-ocr-eng \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /app

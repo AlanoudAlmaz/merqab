@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from typing import Literal
 
+from fastapi.concurrency import run_in_threadpool
 from fastapi import APIRouter, Depends, File, HTTPException, Request, UploadFile
 from pydantic import BaseModel, Field
 
@@ -69,7 +70,8 @@ async def analyze_file(request: Request, file: UploadFile = File(...), db=Depend
         ext, _ = validate_upload(file.filename or "", data, s.max_upload_mb * 1024 * 1024)
     except UploadRejected as e:
         raise HTTPException(415, str(e))
-    ex = evidence_svc.extract(ext, data, s.ocr_enabled)  # in memory only — the file is not stored
+    # OCR is CPU-bound: run it off the event loop so the rest of the site stays responsive meanwhile
+    ex = await run_in_threadpool(evidence_svc.extract, ext, data, s.ocr_enabled)  # in memory only — never stored
     text = ex["text"] or ""
     if not text.strip():
         return {"extracted": False, "note": ex["note"], "result": None}

@@ -67,9 +67,15 @@ def ocr_image(data: bytes) -> tuple[str | None, str]:
     import pytesseract
     try:
         g = img.convert("L")
-        if g.width < 1200:
+        # Phone screenshots are large; on a small server OCR time grows with pixels. Keep the longest side near
+        # 1600 px (phone text stays well above the size Tesseract needs) and only enlarge genuinely small images.
+        longest = max(g.width, g.height)
+        if longest > 1600:
+            k = 1600 / longest
+            g = g.resize((max(1, int(g.width * k)), max(1, int(g.height * k))))
+        elif g.width < 700:
             g = g.resize((g.width * 2, g.height * 2))
-        text = pytesseract.image_to_string(g, lang="ara+eng", timeout=25)
+        text = pytesseract.image_to_string(g, lang="ara+eng", config="--oem 1 --psm 3", timeout=90)
     except Exception as exc:
         log.warning("OCR failed: %s", type(exc).__name__)
         return None, "OCR failed on this image."
