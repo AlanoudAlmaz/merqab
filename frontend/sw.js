@@ -1,7 +1,7 @@
 // MIRGAB service worker: offline app shell, Web Push, notification taps.
 // App files are fetched network-first (so updates show immediately) and fall back to the cache offline.
 // API calls are never cached: analysis results and personal data stay out of the cache.
-const CACHE = "mirqab-shell-v26";
+const CACHE = "mirqab-shell-v27";
 const SHELL = ["/", "/index.html", "/css/app.css", "/js/app.js", "/js/core.js", "/manifest.webmanifest",
   "/assets/logo-mark.png", "/assets/logo-small.png", "/assets/falcon.png", "/assets/icons/icon-192.png", "/i18n/ar.json", "/i18n/en.json"];
 

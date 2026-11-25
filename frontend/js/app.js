@@ -7,6 +7,8 @@ import { renderResult } from "./result.js";
 import { radarPage, stopRadar } from "./publicRadar.js";
 import { addHistory, mobileStrip, registerSW, shieldPage, stopShield } from "./shield.js";
 import { accuracyPage } from "./accuracy.js";
+// installed app (Home Screen): standalone-only layout tweaks
+try { if (navigator.standalone || matchMedia("(display-mode: standalone)").matches) document.documentElement.classList.add("pwa"); } catch {}
 
 const ICONS = {
   home: "M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z M9 12l2 2 4-4",

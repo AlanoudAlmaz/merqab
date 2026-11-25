@@ -2618,3 +2618,15 @@ html[dir="rtl"] .aw-w-list li { padding: 6px 8px 6px 14px; }
 .lang-globe { flex: none; }
 .ld-lang { white-space: nowrap; }
 html:not(.dark) .ld-lang .lang-globe { filter: grayscale(1) brightness(.35); }
+
+
+/* ---------------------------------------------------------------- installed app (Home Screen / standalone) only
+   On a phone the landing respects the status bar, shows a slightly smaller centred falcon and keeps the text close
+   to it. The website in a normal browser is unchanged. */
+@media (max-width: 860px) {
+  html.pwa .ld { --fxw: min(76vw, 420px); --fxh: calc(var(--fxw) * .6707);
+    --gtop: max(calc(env(safe-area-inset-top) + 78px), calc(50dvh - var(--fxh) / 2 - 175px)); }
+  html.pwa .ld-top { top: calc(env(safe-area-inset-top) + 8px); }
+  html.pwa .fx-stage, html.pwa[dir="rtl"] .fx-stage, html.pwa[dir="ltr"] .fx-stage { top: var(--gtop); width: var(--fxw); }
+  html.pwa .ld-copy { top: calc(var(--gtop) + var(--fxh) + 26px); bottom: auto; }
+}
