@@ -1,4 +1,4 @@
-// MERQAB intelligence report: choose filters (the same ones the radar uses) → a branded report document
+// MIRGAB intelligence report: choose filters (the same ones the radar uses) → a branded report document
 // built only from GET /api/radar/report → print / save as PDF, or export every matching site as CSV.
 import { api, errorBox, fmtTime, h, isRTL, L, locale, state, t } from "./core.js";
 
@@ -275,7 +275,7 @@ function documentView(d, f, brands) {
   const cover = h("header", { class: "rp-cover" },
     h("div", { class: "rp-cover-top" },
       h("div", { class: "rp-brand" }, h("img", { src: "assets/logo-mark.png", alt: "", width: "44", height: "44" }),
-        h("div", {}, h("b", {}, "MERQAB"), h("span", { lang: "ar" }, "مرقاب"))),
+        h("div", {}, h("b", {}, "MIRGAB"), h("span", { lang: "ar" }, "مرقاب"))),
       h("div", { class: "rp-badges" }, h("span", { class: `rp-tlp ${f.tlp || "clear"}` }, tlp), h("span", { class: "rp-kind-b" }, t(tech ? "rp.tech" : "rp.exec")))),
     h("div", { class: "rp-cover-t" }, h("div", { class: "rp-kicker" }, t("rp.kicker")), h("h1", {}, t("rp.doc_title")),
       h("p", {}, d.period.from ? `${day(d.period.from)} — ${day(d.period.to)}` : "—")),
@@ -293,7 +293,7 @@ function documentView(d, f, brands) {
       h("ol", {}, ...sections.map((k, i) => h("li", {}, h("a", { href: `#rp-${i + 1}`, onclick: (e) => { e.preventDefault(); doc.querySelector(`#rp-${i + 1}`)?.scrollIntoView({ behavior: "smooth" }); } }, t(k)))))),
     ...body,
     h("footer", { class: "rp-foot small" }, h("span", {}, t("rp.footer")), h("code", {}, `${ref} · ${tlp}`)),
-    h("div", { class: "rp-running", "aria-hidden": "true" }, h("span", {}, "MERQAB · ", t("rp.doc_title")), h("span", {}, `${ref} · ${tlp}`)));
+    h("div", { class: "rp-running", "aria-hidden": "true" }, h("span", {}, "MIRGAB · ", t("rp.doc_title")), h("span", {}, `${ref} · ${tlp}`)));
 
   const csvHref = `/api/radar/report.csv?${query(f)}`;
   const bar = h("div", { class: "rp-toolbar" },

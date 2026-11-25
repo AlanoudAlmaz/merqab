@@ -1,4 +1,4 @@
-"""Web Push (VAPID) for MERQAB devices.
+"""Web Push (VAPID) for MIRGAB devices.
 
 * Keys: MIRQAB_VAPID_PRIVATE_KEY (PEM) if set, otherwise generated once and kept in <data>/vapid_private.pem (0600).
 * Devices register a real browser PushSubscription. The server keeps the subscription plus a SHA-256 hash of a

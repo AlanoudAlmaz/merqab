@@ -131,7 +131,7 @@ function linksView(urls) {
       u.signals.length ? h("ul", {}, u.signals.map(s => h("li", {}, L(s)))) : h("p", { class: "small muted" }, t("res.no_signals")))));
 }
 
-// Live-intelligence matches, kept honest: confirmed listing, MERQAB's own unverified detection, or a
+// Live-intelligence matches, kept honest: confirmed listing, MIRGAB's own unverified detection, or a
 // naming-pattern prediction — each with its source, time and a path to the campaign's intelligence.
 function radarView(matches) {
   if (!matches?.length) return null;
@@ -191,7 +191,7 @@ function feedbackView(r) {
 }
 
 export function summaryText(r) {
-  const lines = [`MERQAB — ${t(`res.level.${r.risk.level}`)} (${r.risk.score}/100)`, t(`res.verdict.${r.risk.level}`), "",
+  const lines = [`MIRGAB — ${t(`res.level.${r.risk.level}`)} (${r.risk.score}/100)`, t(`res.verdict.${r.risk.level}`), "",
     `${t("res.do_now")}: ${L(r.intervention.primary)}`, ...r.intervention.primary.do_now.map(x => `- ${L(x)}`), "",
     `${t("res.why")}:`, ...r.indicators.map(i => `- ${L(i, "label")}`),
     ...r.urls.map(u => `- ${u.defanged} — ${t(`res.level.${u.level}`)}`), "",
@@ -241,7 +241,7 @@ function packView(p) {
 function takedownLetter(p) {
   const reg = p.registration || {}, host = p.hosting?.[0] || {};
   const lines = [
-    `MERQAB — Phishing takedown request / طلب إزالة موقع تصيّد`, `Reference: ${p.pack_id}`, `Generated (UTC): ${p.generated_at}`, `SHA-256: ${p.sha256}`, "",
+    `MIRGAB — Phishing takedown request / طلب إزالة موقع تصيّد`, `Reference: ${p.pack_id}`, `Generated (UTC): ${p.generated_at}`, `SHA-256: ${p.sha256}`, "",
     `To: ${p.abuse_contacts.join(", ") || "(registrar / hosting abuse desk)"}`, "",
     "We report the following address as a phishing / fraud site and request its suspension.", "",
     `URL (defanged): ${p.url.defanged}`, `Domain: ${p.url.registrable_domain}`,

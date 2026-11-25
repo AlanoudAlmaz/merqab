@@ -1,7 +1,7 @@
 """Family Shield content: how a scam unfolds, practice messages and audience advice.
 
 Stages and tactics come straight from the behavioural engine's taxonomy (``TACTICS``), so the page
-teaches exactly what MERQAB detects. Practice messages are short training examples written for this
+teaches exactly what MIRGAB detects. Practice messages are short training examples written for this
 page (labelled as such in the UI); their highlighted phrases are produced by the real engine at request
 time, never hand-annotated.
 """

@@ -6,7 +6,7 @@
    stripped, so their absence proves nothing.
 2. Optional AI visual review of images (OpenAI vision), reported as an opinion with its own caveat.
 
-MERQAB never labels a file "real": no tool can prove authenticity.
+MIRGAB never labels a file "real": no tool can prove authenticity.
 """
 from __future__ import annotations
 

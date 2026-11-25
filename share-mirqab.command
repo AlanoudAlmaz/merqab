@@ -1,10 +1,10 @@
 #!/bin/bash
-# Keeps MERQAB's public link alive: checks it every 20 s and, if it stops answering for about a minute,
+# Keeps MIRGAB's public link alive: checks it every 20 s and, if it stops answering for about a minute,
 # restarts the Cloudflare tunnel and writes the new link to PUBLIC-LINK.txt. Keeps the Mac awake while open.
 cd "$(dirname "$0")" || exit 1
 caffeinate -dimsu -w $$ &
 BIN="$(command -v cloudflared || echo .tools/cloudflared)"
-echo "== MERQAB keep-online =="
+echo "== MIRGAB keep-online =="
 echo "Keep this window open. Keep the Mac plugged in with the lid open."
 start_tunnel() {
   pkill -f "cloudflared tunnel --no-autoupdate --url http://127.0.0.1" 2>/dev/null
@@ -18,7 +18,7 @@ start_tunnel() {
 fails=0
 while true; do
   if ! curl -s -m 5 -o /dev/null "http://127.0.0.1:8765/api/health"; then
-    echo "$(date '+%H:%M') MERQAB server is not running — double-click start-mirqab.command"
+    echo "$(date '+%H:%M') MIRGAB server is not running — double-click start-mirqab.command"
   else
     L=$(cat PUBLIC-LINK.txt 2>/dev/null)
     if [ -n "$L" ] && [ "$(curl -s -m 15 -o /dev/null -w '%{http_code}' "$L/api/health")" = "200" ]; then

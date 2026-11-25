@@ -162,10 +162,10 @@ def analyze(kind: str, content: str, llm: LLMProvider | None = None, community: 
     if not url_reports:
         limitations = []
     elif community.radar_hosts:  # the Live Radar's stored OpenPhish list and look-alike detections
-        limitations = [{"en": "Links are analysed offline; MERQAB never opens them. They were checked against the OpenPhish list and MERQAB's own look-alike detections stored by the Live Radar — a new site may not be listed yet.",
+        limitations = [{"en": "Links are analysed offline; MIRGAB never opens them. They were checked against the OpenPhish list and MIRGAB's own look-alike detections stored by the Live Radar — a new site may not be listed yet.",
                         "ar": "تُحلَّل الروابط دون فتحها؛ مرقاب لا يزورها أبداً. فُحصت مقابل قائمة OpenPhish والمواقع المقلّدة التي رصدها مرقاب في الرادار المباشر — قد لا يكون الموقع الجديد مدرجاً بعد."}]
     else:
-        limitations = [{"en": "Links are analysed offline; MERQAB never opens them. No reputation data is available (the Live Radar is off or has no data yet).",
+        limitations = [{"en": "Links are analysed offline; MIRGAB never opens them. No reputation data is available (the Live Radar is off or has no data yet).",
                         "ar": "تُحلَّل الروابط دون فتحها؛ مرقاب لا يزورها أبداً. لا تتوفر بيانات سمعة (الرادار المباشر متوقف أو بلا بيانات بعد)."}]
     if "identity_claim" in tactics:
         limitations.append({"en": "Voice/video deepfake detection requires a media-forensics model that is not configured; only text cues were assessed.",

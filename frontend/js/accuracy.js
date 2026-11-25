@@ -46,7 +46,7 @@ function setCard(s, base) {
     ex(s.examples_missed, "missed"), ex(s.examples_false_alarm, "false"));
 }
 
-// Where each judging criterion lives in MERQAB — every link opens the real feature.
+// Where each judging criterion lives in MIRGAB — every link opens the real feature.
 const CRITERIA = [
   { k: "c1", w: 30, links: [["#/accuracy", "cj.l_bench"], ["#/home", "cj.l_check"]] },
   { k: "c2", w: 25, links: [["#/radar", "cj.l_radar"]] },

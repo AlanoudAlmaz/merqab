@@ -332,7 +332,7 @@ def test_scam_theater_branches_and_rapid_round(server, browser):
     # the test still uses the real engine's highlights
     page.click("#cm-test .rr-scam")
     page.wait_for_selector(".rr-res")
-    assert "MERQAB engine" in page.inner_text(".rr-res")
+    assert "MIRGAB engine" in page.inner_text(".rr-res")
     assert not errors, errors
 
 
@@ -428,7 +428,7 @@ def test_landing_entrance(server, browser):
     page.click(".ld-theme")
     assert page.locator(".ld-lang").count() == 1                                    # language picker on the entrance
     brand = page.inner_text(".ld-brand")
-    assert brand.count("MERQAB") == 1 and brand.count("مرقاب") == 1
+    assert brand.count("MIRGAB") == 1 and brand.count("مرقاب") == 1
     page.click(".ld-enter")
     page.wait_for_selector(".hero", timeout=15000)     # straight into the app, no login or onboarding
     assert page.url.endswith("#/home") and page.locator(".topbar").is_visible()
@@ -543,7 +543,7 @@ def test_generate_report_from_radar(server, browser):
     page.click(".rp-form button[type=submit]")
     page.wait_for_selector(".rp-doc")
     doc = page.inner_text(".rp-doc")
-    assert "Threat intelligence report" in doc and "MERQAB" in doc
+    assert "Threat intelligence report" in doc and "MIRGAB" in doc
     assert "confirmed by public lists" in doc and "roblox" in doc.lower()
     assert "emiratesnbd" not in doc.lower()                              # status filter applied
     assert page.locator(".rp-long .rp-table tbody tr").count() == 2

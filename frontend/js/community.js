@@ -1,4 +1,4 @@
-// MERQAB Community — one living experience instead of a list of sections:
+// MIRGAB Community — one living experience instead of a list of sections:
 //   Pulse (real-time community signal) → Decoder (what is happening + where you are in the scam chain)
 //   → Scam Theater (interactive films) → Family Circle (plan + warnings) → Signal board (verified warnings, reports)
 //   with an Emergency mode for "it already happened".

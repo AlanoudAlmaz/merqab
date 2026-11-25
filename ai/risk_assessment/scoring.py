@@ -148,7 +148,7 @@ def score(tactics: set[str], url_reports: list[dict], brand_mismatch: list[dict]
         unc.append({"en": "Only one indicator was found; context you know (who sent it, whether you expected it) matters.",
                     "ar": "تم العثور على مؤشر واحد فقط؛ السياق الذي تعرفه (من أرسلها، وهل كنت تتوقعها) مهم."})
     if any(not m.get("confirmed") for m in radar or []):
-        unc.append({"en": "A link matches a look-alike site MERQAB detected on its own (not yet confirmed by a phishing list) — treat it as suspicious, not as proven.",
+        unc.append({"en": "A link matches a look-alike site MIRGAB detected on its own (not yet confirmed by a phishing list) — treat it as suspicious, not as proven.",
                     "ar": "رابط يطابق موقعاً مقلّداً رصده مرقاب بنفسه (غير مؤكَّد في قوائم التصيّد بعد) — تعامل معه كمشبوه لا كمثبَت."})
     if protective_phrases and lvl in ("low", "medium"):
         unc.append({"en": "The text contains protective wording (e.g. 'never share this code'), which is typical of genuine notifications.",

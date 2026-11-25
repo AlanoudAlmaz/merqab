@@ -75,7 +75,7 @@ def build_timeline(evidence: list[dict]) -> dict:
     Each event records where its time came from:
       content  – timestamp written inside the evidence (as stated, unverified)
       metadata – file metadata such as EXIF or e-mail Date header (can be altered by the source)
-      system   – time MERQAB received the evidence (reliable, but not the time of the incident)
+      system   – time MIRGAB received the evidence (reliable, but not the time of the incident)
     """
     events, undated = [], []
     for ev in evidence:

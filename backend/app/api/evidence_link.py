@@ -4,7 +4,7 @@ Collects, without ever opening the suspicious website:
 * registration data from RDAP (the IETF successor of WHOIS): registrar, registration / expiry dates, status,
   name servers and the registrar's abuse contact; a domain younger than 30 days is flagged as newly registered;
 * hosting data: the IP addresses the name resolves to and the RDAP record of that network (owner, country, abuse);
-* MERQAB's own explainable analysis and any live-radar / threat-feed record of the domain;
+* MIRGAB's own explainable analysis and any live-radar / threat-feed record of the domain;
 * UTC timestamps and a SHA-256 fingerprint so the pack can be cited and verified later.
 
 Only rdap.org and the HTTPS RDAP servers it redirects to are contacted (fixed hosts; no SSRF). Every step reports

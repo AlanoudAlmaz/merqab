@@ -1,6 +1,6 @@
 // Scam Theater — short interactive dramatizations. Each film plays on a phone stage, pauses at the moment of
 // decision (with a countdown, so the viewer feels the pressure tactic), branches to the outcome of the choice and ends
-// with the lesson and the real MERQAB engine tactics involved. Scripts are training dramatizations written for MERQAB
+// with the lesson and the real MIRGAB engine tactics involved. Scripts are training dramatizations written for MIRGAB
 // (not real incidents); names, numbers and links are fictional and defanged.
 import { h, isRTL, L, t } from "./core.js";
 
@@ -112,9 +112,9 @@ export const FILMS = [
             out: [
               { k: "sys", d: 3000, text: tx("Official app: “In transit — no fees due.”", "التطبيق الرسمي: «قيد الشحن — لا رسوم مستحقة».") , cap: tx("No fee. No hold. The message was fake.", "لا رسوم ولا تعليق. الرسالة مزيفة.") }],
             verdict: tx("Safe. Opening the official app yourself skipped the trap completely.", "بأمان. فتح التطبيق الرسمي بنفسك تجاوز الفخ بالكامل.") },
-          { id: "check", label: tx("Paste it into MERQAB first", "ألصقها في مرقاب أولاً"), safe: true,
+          { id: "check", label: tx("Paste it into MIRGAB first", "ألصقها في مرقاب أولاً"), safe: true,
             out: [
-              { k: "sys", d: 3200, text: tx("MERQAB: High risk · look-alike courier domain · payment pressure", "مرقاب: خطر مرتفع · نطاق شحن مقلَّد · ضغط للدفع"), cap: tx("The check takes seconds and explains why.", "الفحص يأخذ ثوانٍ ويشرح السبب.") }],
+              { k: "sys", d: 3200, text: tx("MIRGAB: High risk · look-alike courier domain · payment pressure", "مرقاب: خطر مرتفع · نطاق شحن مقلَّد · ضغط للدفع"), cap: tx("The check takes seconds and explains why.", "الفحص يأخذ ثوانٍ ويشرح السبب.") }],
             verdict: tx("Safe. You checked before you clicked.", "بأمان. فحصت قبل أن تضغط.") }] }],
     rule: tx("Couriers and authorities don’t collect fees through SMS links. Open the official app yourself.", "شركات الشحن والجهات الرسمية لا تحصّل رسوماً عبر روابط الرسائل. افتح التطبيق الرسمي بنفسك."),
   },
@@ -229,7 +229,7 @@ function screenFor(b) {
 // Narration uses the browser's built-in voice. speak() resolves when the line has finished, so a film never talks
 // over itself.
 // ------------------------------------------------------------------------------------------------ player
-// tacticByKey: real MERQAB engine taxonomy (from /api/community/shield) used to name what each film demonstrates.
+// tacticByKey: real MIRGAB engine taxonomy (from /api/community/shield) used to name what each film demonstrates.
 export function theater({ tacticByKey, onDecoder, onPlayed, onStart, onAdvance, films = FILMS }) {
   let film = films[0], idx = 0, phase = "idle", timer = null, beats = [], choice = null, cc = true, countdown = null, token = 0;
   const screen = h("div", { class: "ph-screen", "aria-live": "polite" });

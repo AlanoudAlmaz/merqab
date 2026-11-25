@@ -1,6 +1,6 @@
 """Live Threat Radar background service.
 
-Runs inside the MERQAB process (no extra infrastructure):
+Runs inside the MIRGAB process (no extra infrastructure):
   * a thread follows the newest entries of several public Certificate Transparency logs;
   * a thread refreshes the OpenPhish community feed (conditional download, listing status);
   * a thread scans four large public phishing-domain lists (CERT Polska, Phishing Army, Phishing.Database,

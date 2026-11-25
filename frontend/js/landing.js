@@ -1,4 +1,4 @@
-// Landing — the MERQAB falcon eye.
+// Landing — the MIRGAB falcon eye.
 // The original falcon artwork (transparent PNG) sits in a 3D stage that tilts toward the pointer. Live SVG layers are
 // drawn exactly over its eye: rotating iris rings, a radar sweep, a scan line and a pupil that follows the pointer,
 // plus outer radar arcs and pings. "Enter" flies the camera into the pupil until it fills the screen, then reveals the
@@ -85,7 +85,7 @@ function falconStage() {
     s("circle", { class: "fx-ping fx-ping2", cx: IRIS.x, cy: IRIS.y, r: 120 }));
   const tilt = h("div", { class: "fx-tilt" }, h("div", { class: "fx-orb", "aria-hidden": "true" }), eyeSvg, arcs);
   const zoomer = h("div", { class: "fx-zoomer" }, tilt);
-  return { stage: h("div", { class: "fx-stage", role: "img", "aria-label": "MERQAB" }, zoomer), zoomer, tilt, eyeSvg, pupil: eyeSvg.querySelector(".fx-pupil") };
+  return { stage: h("div", { class: "fx-stage", role: "img", "aria-label": "MIRGAB" }, zoomer), zoomer, tilt, eyeSvg, pupil: eyeSvg.querySelector(".fx-pupil") };
 }
 
 export function landingPage(view, onEnter) {
@@ -94,16 +94,16 @@ export function landingPage(view, onEnter) {
   const zoom = h("div", { class: "fx-zoom", "aria-hidden": "true" });
   const enter = h("button", { class: "ld-enter", type: "button" },
     h("span", { class: "ld-enter-glow", "aria-hidden": "true" }),
-    h("span", { lang: "en" }, "Enter MERQAB"), h("i", { "aria-hidden": "true" }, "|"), h("span", { lang: "ar" }, "ادخل مرقاب"));
+    h("span", { lang: "en" }, "Enter MIRGAB"), h("i", { "aria-hidden": "true" }, "|"), h("span", { lang: "ar" }, "ادخل مرقاب"));
   const langBtn = langPicker(() => landingPage(view, onEnter), "ld-lang");
   const fx = falconStage();
-  const root = h("section", { class: "ld", "aria-label": "MERQAB" },
+  const root = h("section", { class: "ld", "aria-label": "MIRGAB" },
     canvas, fx.stage, zoom,
     h("div", { class: "ld-top" },
       h("div", { class: "ld-brand" },
         h("img", { src: "/assets/falcon-sm.png", alt: "", width: "56", height: "34", class: "brand-falcon on-dark" }),
         h("img", { src: "/assets/falcon-sm-ink.png", alt: "", width: "56", height: "34", class: "brand-falcon on-light" }),
-        h("span", { class: "brand-text" }, h("span", { class: "brand-ar", lang: "ar", dir: "rtl" }, "مرقاب"), h("b", { lang: "en", dir: "ltr" }, "MERQAB"))),
+        h("span", { class: "brand-text" }, h("span", { class: "brand-ar", lang: "ar", dir: "rtl" }, "مرقاب"), h("b", { lang: "en", dir: "ltr" }, "MIRGAB"))),
       h("div", { class: "ld-tools" }, themeBtn(), langBtn)),
     h("div", { class: "ld-copy" },
       h("h1", {}, t("ld.title")),

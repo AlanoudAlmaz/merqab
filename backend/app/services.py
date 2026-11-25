@@ -170,7 +170,7 @@ def analyze_case(db: sqlite3.Connection, case_id: int, llm: LLMProvider) -> dict
         c = rl["campaign"]
         findings.append({"fingerprint": f"radar:{rl['evidence_id']}:{rl['host']}", "category": "observed", "source": "rule",
                          "evidence_ids": [rl["evidence_id"]],
-                         "statement_en": f"E{rl['evidence_id']}: {rl['host']} was detected by MERQAB's live radar on {rl['first_seen'][:16]} — {src_en}.",
+                         "statement_en": f"E{rl['evidence_id']}: {rl['host']} was detected by MIRGAB's live radar on {rl['first_seen'][:16]} — {src_en}.",
                          "statement_ar": f"E{rl['evidence_id']}: رصد رادار مرقاب {rl['host']} في {rl['first_seen'][:16]} — {src_ar}."})
         if c:
             findings.append({"fingerprint": f"campaign:{rl['evidence_id']}:{c['campaign_id']}", "category": "inference", "source": "heuristic",

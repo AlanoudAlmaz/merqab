@@ -1,5 +1,5 @@
 // Admin-only console: sends a clearly labelled DEMO alert to devices whose owners opted in.
-// Signing in uses the normal MERQAB staff login; the server checks the admin role on every call.
+// Signing in uses the normal MIRGAB staff login; the server checks the admin role on every call.
 import { api, h, loadLang, setSession, state, toast } from "./core.js";
 
 const root = () => document.getElementById("adm");

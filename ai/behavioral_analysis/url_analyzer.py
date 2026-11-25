@@ -1,6 +1,6 @@
 """Static, offline analysis of URLs.
 
-MERQAB never fetches the analysed URL (doing so could alert the attacker, trigger downloads or
+MIRGAB never fetches the analysed URL (doing so could alert the attacker, trigger downloads or
 expose the server). Reputation services can be plugged in through ``ReputationProvider``.
 """
 from __future__ import annotations
@@ -284,7 +284,7 @@ def analyze_url(raw: str, _depth: int = 0) -> UrlReport:
                 break
 
     # Redirect / wrapper evasion: a trusted-looking link that forwards to another address
-    # (google.com/url?q=…, l.facebook.com/l.php?u=…, ?redirect=https://…). MERQAB never opens links,
+    # (google.com/url?q=…, l.facebook.com/l.php?u=…, ?redirect=https://…). MIRGAB never opens links,
     # so it unwraps the embedded destination from the address itself and analyses that too.
     inner = _embedded_url(parts, _depth)
     if inner:

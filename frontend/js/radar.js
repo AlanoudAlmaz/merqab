@@ -59,7 +59,7 @@ const dur = (a, b) => {
 };
 
 // ---------------------------------------------------------------- intelligence pipeline
-// Sources → MERQAB → results, as one live flow. Every number is from /api/radar: source health and
+// Sources → MIRGAB → results, as one live flow. Every number is from /api/radar: source health and
 // freshness, certificates actually checked, the measured rate between two polls, and what came out.
 function pipeline() {
   const el = (tag, cls, ...kids) => h(tag, { class: cls }, ...kids);
@@ -133,7 +133,7 @@ function pipeline() {
 }
 
 // ---------------------------------------------------------------- graph (radar projection)
-// Every position encodes data: distance from the centre = how long ago MERQAB first saw the site
+// Every position encodes data: distance from the centre = how long ago MIRGAB first saw the site
 // (rings: 1 h, 24 h, 7 d, older); angle = its campaign sector. Nothing is placed for decoration.
 const RINGS = [{ ms: 3600e3, r: 130, key: "cst.ring_1h" }, { ms: 86400e3, r: 250, key: "cst.ring_24h" },
   { ms: 7 * 86400e3, r: 370, key: "cst.ring_7d" }, { ms: 60 * 86400e3, r: 480, key: "cst.ring_old" }];
@@ -173,7 +173,7 @@ const STYLE = [
   { selector: "node[type='campaign'][status='confirmed']", style: { "border-color": CONF, "color": "#fda4af" } },
   { selector: "node[type='sector']", style: { "background-opacity": 0, "width": 1, "height": 1, "label": "data(label)", "font-size": 15,
     "color": "#6f8796", "events": "no", "text-valign": "center", "text-halign": "center" } },
-  // Links point from the site MERQAB saw first to the one seen later; the flowing dashes show that direction.
+  // Links point from the site MIRGAB saw first to the one seen later; the flowing dashes show that direction.
   { selector: "edge", style: { "width": 2, "line-color": TEAL, "opacity": 0.55, "curve-style": "unbundled-bezier",
     "control-point-distances": 26, "control-point-weights": 0.5, "z-index": 8,
     "line-style": "dashed", "line-dash-pattern": [7, 5], "target-arrow-shape": "triangle", "target-arrow-color": TEAL,

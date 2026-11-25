@@ -15,7 +15,7 @@ LIMITATIONS = [
     "OCR text may contain recognition errors; the original file (identified by its SHA-256 hash) is authoritative.",
     "Links were analysed offline without visiting them; no external reputation service was queried unless stated.",
     "Voice and video deepfake analysis is not performed in this version; only textual cues were assessed.",
-    "MERQAB correlates indicators between incidents; it does not identify or accuse any individual.",
+    "MIRGAB correlates indicators between incidents; it does not identify or accuse any individual.",
 ]
 
 
@@ -34,7 +34,7 @@ def build(db: sqlite3.Connection, case_id: int, evidence_dir) -> dict:
     fnd = rows(db.execute("SELECT * FROM findings WHERE case_id=? ORDER BY category, id", (case_id,)), ("evidence_ids",))
     la = case.get("last_analysis") or {}
     return {
-        "report_type": "MERQAB investigation summary",
+        "report_type": "MIRGAB investigation summary",
         "generated_at": now(), "rules_version": RULES_VERSION,
         "case": {k: case[k] for k in ("ref", "title", "description", "status", "created_at", "updated_at")},
         "analysis_summary": la.get("summary"),

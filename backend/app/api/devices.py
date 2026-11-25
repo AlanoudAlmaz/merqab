@@ -161,12 +161,12 @@ def test_alert(request: Request, db=Depends(get_db), x_device_token: str | None 
     d = _device(db, x_device_token)
     ar = d["lang"] == "ar"
     res = _push(request).send(db, [d], "test", lambda _: {
-        "title": "مرقاب: تنبيه أمني تجريبي" if ar else "MERQAB: test security alert",
+        "title": "مرقاب: تنبيه أمني تجريبي" if ar else "MIRGAB: test security alert",
         "body": ("هذا تنبيه تجريبي طلبته من جهازك. الإشعارات تعمل — ستصلك تحذيرات حقيقية بنفس الطريقة."
                  if ar else "This is a test you requested. Notifications work — real warnings will arrive the same way."),
         "url": "/#/shield", "tag": "mirqab-test"})
     if not res["sent"]:
-        raise HTTPException(502, "The push service did not accept the notification — open MERQAB and re-enable protection.")
+        raise HTTPException(502, "The push service did not accept the notification — open MIRGAB and re-enable protection.")
     return res
 
 
@@ -249,15 +249,15 @@ def qr(request: Request, path: str = "/"):
     return Response(buf.getvalue(), media_type="image/svg+xml", headers={"Cache-Control": "no-cache"})
 
 
-PREVIEW_MESSAGE = ("مرقاب | MERQAB\n"
+PREVIEW_MESSAGE = ("مرقاب | MIRGAB\n"
                    "عند إطلاق المنصة، امسح هذا الرمز لتثبيت مرقاب على شاشتك الرئيسية وتفعيل التنبيهات الفورية.\n"
-                   "Once MERQAB is live, scan this code to add it to your home screen and turn on instant alerts.")
+                   "Once MIRGAB is live, scan this code to add it to your home screen and turn on instant alerts.")
 
 
 @router.get("/qr/preview.svg")
 def qr_preview():
-    """Placeholder QR for a local (non-public) copy: scanning it shows a short message from MERQAB, not a link.
-    High error correction so the MERQAB logo can sit in the centre."""
+    """Placeholder QR for a local (non-public) copy: scanning it shows a short message from MIRGAB, not a link.
+    High error correction so the MIRGAB logo can sit in the centre."""
     import qrcode
     import qrcode.image.svg
     q = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_H, box_size=12, border=2,

@@ -1,4 +1,4 @@
-// Contextual intelligence view for MERQAB LIVE: Detect → Explore → Understand → Prevent.
+// Contextual intelligence view for MIRGAB LIVE: Detect → Explore → Understand → Prevent.
 // Opens over the radar when a campaign or finding is explored. The Scam Campaign DNA graph has two kinds
 // of edge only — "this site carries this trait" and an explained link between two sites — both from
 // /api/radar/intel. Evidence shown is public (CT log / OpenPhish); case data appears only for signed-in users.
@@ -125,7 +125,7 @@ function render(d, head, body, refresh) {
   const detail = h("div", { class: "iv-site" });
   const scrub = h("div", { class: "iv-scrub" });
 
-  // ---------- Detect: evidence per site, in the order MERQAB first saw them
+  // ---------- Detect: evidence per site, in the order MIRGAB first saw them
   const sorted = [...d.sites].sort((a, b) => a.first_seen.localeCompare(b.first_seen));
   const evidence = h("ol", { class: "iv-ev" }, ...sorted.map(s => h("li", {},
     h("button", { class: "iv-ev-btn", type: "button", onclick: () => pickSite(s.id) },
@@ -238,7 +238,7 @@ function render(d, head, body, refresh) {
   cy.on("tap", (e) => { if (e.target === cy) { clear(); caption.textContent = t("iv.tap_hint"); detail.replaceChildren(); } });
   if (focusSite) { cy.getElementById(`s${focusSite.id}`).addClass("focus"); pickSite(focusSite.id); }
 
-  // Replay how the campaign grew: each step adds the next site in the order MERQAB first saw it.
+  // Replay how the campaign grew: each step adds the next site in the order MIRGAB first saw it.
   if (sorted.length > 2 && sorted.at(-1).first_seen > sorted[0].first_seen) {
     const out = h("output", { class: "small" });
     const range = h("input", { type: "range", min: "1", max: String(sorted.length), value: String(sorted.length), step: "1", "aria-label": t("iv.replay") });

@@ -2123,7 +2123,7 @@ html.dark .rx-acc { background: rgba(0,0,0,.18); }
 html:not(.dark) .ld-logo { mix-blend-mode: normal; }
 .ld-logo { -webkit-mask-image: radial-gradient(ellipse 75% 80% at 50% 50%, #000 70%, transparent 100%); mask-image: radial-gradient(ellipse 75% 80% at 50% 50%, #000 70%, transparent 100%); }
 
-/* ================================================================ Landing: MERQAB falcon eye (3D, animated) */
+/* ================================================================ Landing: MIRGAB falcon eye (3D, animated) */
 .fx-stage { position: absolute; z-index: 1; top: 50%; inset-inline-end: max(2vw, 10px); width: min(52vw, 820px); aspect-ratio: 835 / 560;
   transform: translateY(-50%); perspective: 1100px; will-change: transform; animation: fx-in 1.4s cubic-bezier(.2,.7,.2,1) both; }
 @keyframes fx-in { from { opacity: 0; filter: blur(8px); } to { opacity: 1; filter: none; } }
@@ -2600,7 +2600,7 @@ html[dir="rtl"] .aw-w-list li { padding: 6px 8px 6px 14px; }
 .aw-go { font-size: 1.1rem; padding: 14px 34px; border-radius: 999px; box-shadow: 0 10px 30px rgba(94,234,212,.25); }
 .aw-w-time { font-size: .82rem; color: var(--ink-3); }
 
-/* local preview QR with the MERQAB logo in the centre */
+/* local preview QR with the MIRGAB logo in the centre */
 .ms-qr-art { position: relative; width: 148px; height: 148px; }
 .ms-qr-art > img:first-child { width: 148px; height: 148px; }
 .ms-qr-logo { position: absolute; left: 50%; top: 50%; width: 34px; height: 34px; transform: translate(-50%, -50%);

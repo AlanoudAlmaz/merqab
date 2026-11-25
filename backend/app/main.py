@@ -1,4 +1,4 @@
-"""MERQAB application factory.
+"""MIRGAB application factory.
 
 Run:  uvicorn --factory backend.app.main:create_app --port 8000
 """
@@ -48,7 +48,7 @@ def _bootstrap_admin(settings: Settings) -> None:
         if generated:
             pw = _s.token_urlsafe(12) + "9a"
         c.execute("INSERT OR IGNORE INTO users (username, pw_hash, role, display_name, created_at) VALUES (?,?,?,?,?)",
-                  (user, hash_password(pw), "admin", "MERQAB admin", dbm.now()))
+                  (user, hash_password(pw), "admin", "MIRGAB admin", dbm.now()))
         c.commit()
         if generated:
             log.warning("Created admin '%s' with a one-time generated password: %s  (change it by setting MIRQAB_ADMIN_PASSWORD)", user, pw)
@@ -69,7 +69,7 @@ def create_app(settings: Settings | None = None, llm: LLMProvider | None = None)
         a.state.radar.shutdown()
         a.state.push.shutdown()
 
-    app = FastAPI(title="MERQAB API", version="1.1.0", lifespan=lifespan,
+    app = FastAPI(title="MIRGAB API", version="1.1.0", lifespan=lifespan,
                   description="AI-assisted cybercrime prevention, investigation and community protection.",
                   docs_url="/api/docs" if settings.api_docs else None, redoc_url=None,
                   openapi_url="/api/openapi.json" if settings.api_docs else None)

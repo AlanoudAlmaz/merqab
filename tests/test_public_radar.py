@@ -64,4 +64,4 @@ def test_preview_qr_carries_a_message_not_a_link(client):
     r = client.get("/api/qr/preview.svg")
     assert r.status_code == 200 and r.headers["content-type"].startswith("image/svg+xml") and b"<svg" in r.content
     from backend.app.api.devices import PREVIEW_MESSAGE
-    assert "http" not in PREVIEW_MESSAGE and "MERQAB" in PREVIEW_MESSAGE
+    assert "http" not in PREVIEW_MESSAGE and "MIRGAB" in PREVIEW_MESSAGE

@@ -1,4 +1,4 @@
-// MERQAB single-page app: routing, Home, Smart Protection, Community, Reports, Settings.
+// MIRGAB single-page app: routing, Home, Smart Protection, Community, Reports, Settings.
 import { api, errorBox, h, hasRole, isRTL, L, langPicker, loadLang, pickLang, setSession, state, t, toast, withBusy } from "./core.js";
 import { awarenessInProgress, communityExperience, stopCommunity } from "./community.js";
 import { getJourney, goExplore, journeyBar } from "./journey.js";
@@ -196,7 +196,7 @@ async function init() {
   });
   setSession(null);   // no staff sessions in the public app
   registerSW();
-  // Android share sheet ("Share → MERQAB") lands here with ?share_text / share_url
+  // Android share sheet ("Share → MIRGAB") lands here with ?share_text / share_url
   const q = new URLSearchParams(location.search);
   const shared = [q.get("share_title"), q.get("share_text"), q.get("share_url")].filter(Boolean).join("\n").trim();
   if (shared) {

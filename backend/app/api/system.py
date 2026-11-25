@@ -49,7 +49,7 @@ def capabilities(request: Request):
         "live_radar": {"status": "available" if request.app.state.radar.enabled else "unavailable",
                        "sources": ["Certificate Transparency logs", "OpenPhish community feed"]},
         "deepfake_media_analysis": {"status": "integration_ready", "note": "Requires an external audio/video forensics model."},
-        "live_monitoring": {"status": "not_implemented", "note": "MERQAB analyses content you submit; it does not monitor calls, chats or transactions."},
+        "live_monitoring": {"status": "not_implemented", "note": "MIRGAB analyses content you submit; it does not monitor calls, chats or transactions."},
         "store_analysis_text": s.store_analysis_text,
         "max_upload_mb": s.max_upload_mb,
     }

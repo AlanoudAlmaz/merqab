@@ -1,7 +1,7 @@
-// MERQAB service worker: offline app shell, Web Push, notification taps.
+// MIRGAB service worker: offline app shell, Web Push, notification taps.
 // App files are fetched network-first (so updates show immediately) and fall back to the cache offline.
 // API calls are never cached: analysis results and personal data stay out of the cache.
-const CACHE = "mirqab-shell-v25";
+const CACHE = "mirqab-shell-v26";
 const SHELL = ["/", "/index.html", "/css/app.css", "/js/app.js", "/js/core.js", "/manifest.webmanifest",
   "/assets/logo-mark.png", "/assets/logo-small.png", "/assets/falcon.png", "/assets/icons/icon-192.png", "/i18n/ar.json", "/i18n/en.json"];
 
@@ -23,15 +23,15 @@ self.addEventListener("fetch", (e) => {
 
 self.addEventListener("push", (e) => {
   let d = {};
-  try { d = e.data ? e.data.json() : {}; } catch { d = { title: "MERQAB", body: e.data ? e.data.text() : "" }; }
-  const title = String(d.title || "MERQAB").slice(0, 120);
+  try { d = e.data ? e.data.json() : {}; } catch { d = { title: "MIRGAB", body: e.data ? e.data.text() : "" }; }
+  const title = String(d.title || "MIRGAB").slice(0, 120);
   const url = typeof d.url === "string" && d.url.startsWith("/") && !d.url.startsWith("//") ? d.url : "/#/shield";
   e.waitUntil(Promise.all([
     self.registration.showNotification(title, {
       body: String(d.body || "").slice(0, 300), icon: "/assets/icons/icon-192.png", badge: "/assets/icons/icon-192.png",
       tag: d.tag || "mirqab", renotify: true, data: { url, kind: d.kind || "alert", ts: d.ts || new Date().toISOString() },
     }),
-    // tell open MERQAB windows so the dashboard updates live
+    // tell open MIRGAB windows so the dashboard updates live
     self.clients.matchAll({ type: "window", includeUncontrolled: true })
       .then((cs) => cs.forEach((c) => c.postMessage({ type: "mirqab-push", title, body: d.body, kind: d.kind, url, ts: d.ts }))),
   ]));

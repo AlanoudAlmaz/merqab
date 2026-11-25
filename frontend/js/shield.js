@@ -1,4 +1,4 @@
-// MERQAB Mobile Shield: install + activation, real permission states, Web Push, protection dashboard,
+// MIRGAB Mobile Shield: install + activation, real permission states, Web Push, protection dashboard,
 // local threat history and the Live Call Guardian.
 // Honesty rules: every status shown here is read from the browser/OS or the server at render time. Nothing is
 // simulated; anything the web platform cannot do is labelled "unavailable" or "native app (roadmap)".
@@ -499,7 +499,7 @@ function callGuardian(view) {
 }
 
 // ------------------------------------------------------------------------------------------------ strip on the Check page
-// The mobile-shield idea lives inside the existing Check page: QR to open MERQAB on a phone, one-tap activation,
+// The mobile-shield idea lives inside the existing Check page: QR to open MIRGAB on a phone, one-tap activation,
 // the Call Guardian, and a link to the protection settings. Every state shown is read live.
 export async function mobileStrip() {
   const box = h("section", { class: "ms" });
